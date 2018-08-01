@@ -8,8 +8,6 @@ class Api::V1::QuestionsController < ApplicationController
                    include: { user: {only: [:id,:full_name]}}},
                    user: {only: [:id,:full_name]}
                   })
-
-
   end
 
 end

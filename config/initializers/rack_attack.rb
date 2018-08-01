@@ -1,7 +1,7 @@
 class Rack::Attack
-
-  # `Rack::Attack` is configured to use the `Rails.cache` value by default,
-  # but you can override that by setting the `Rack::Attack.cache.store` value
+  # 
+  # # `Rack::Attack` is configured to use the `Rails.cache` value by default,
+  # # but you can override that by setting the `Rack::Attack.cache.store` value
   # Rack::Attack.cache.store = ActiveSupport::Cache::MemoryStore.new
   #
   #
