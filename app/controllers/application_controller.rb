@@ -5,7 +5,11 @@ class ApplicationController < ActionController::API
   include ExceptionHandler
 
   def index
-    #code
+    @amount_users = User.count
+    @amount_questions = Question.count
+    @amount_answers = Answer.count
+    @tenants = Tenant.all.order(requests_amount: :desc)
+    @tenants_requests_total = Tenant.all.sum(:requests_amount)
   end
 
   private

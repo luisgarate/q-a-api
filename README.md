@@ -34,3 +34,60 @@ After you get the `access_token` the header of the request should be like this:
   "Authorization": "Bearer < access_token >"
 }
 ```
+
+* Search
+
+To perform a search in the system its mandatory the next pattern:
+
+*Request*
+`GET` `server_url:3000/api/v1/questions/list?search=minus,nulla`
+
+Note: param `search` and the terms must be separeted by a comma `,` (if there more than one term to look for)
+
+*Response*
+```
+[
+    {
+        "id": 2,
+        "content": "Beatae minus nulla autem?",
+        "answers": [
+            {
+                "id": 386,
+                "content": "Voluptatem ducimus vero pariatur.",
+                "user": {
+                    "id": 33,
+                    "full_name": "Phil Ulysses Barton"
+                }
+            },
+            {
+                "id": 1052,
+                "content": "Numquam consequatur earum et.",
+                "user": {
+                    "id": 2,
+                    "full_name": "Wes Allan Kiehn"
+                }
+            },
+            {
+                "id": 1240,
+                "content": "Eos accusantium nesciunt omnis.",
+                "user": {
+                    "id": 62,
+                    "full_name": "Stacy Jannette Fahey II"
+                }
+            },
+            {
+                "id": 1407,
+                "content": "Et quas sed delectus.",
+                "user": {
+                    "id": 29,
+                    "full_name": "Pasquale Tanesha Lebsack MD"
+                }
+            }
+        ],
+        "user": {
+            "id": 69,
+            "full_name": "Emmitt Wilford Douglas"
+        }
+    }
+]
+```

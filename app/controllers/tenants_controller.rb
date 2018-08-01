@@ -6,6 +6,10 @@ class TenantsController < ApplicationController
     authenticate params[:full_name]
   end
 
+  # def test
+  #   render json: { test: 'some test text'}
+  # end
+
   private
   def authenticate(full_name)
     command = AuthenticateTenant.call(full_name)
