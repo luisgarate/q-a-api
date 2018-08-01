@@ -1,24 +1,35 @@
-# README
+# Q&A API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Login system
+A Tenant has `full_name` as attribute to perform the Login to get the `access_token`
 
-Things you may want to cover:
+*Request*
+`POST` `server_url:3000/auth/login`
 
-* Ruby version
+```
+{
+  "full_name": "Johnny Kristine Sauer"
+}
+```
 
-* System dependencies
+*Response*
+```
+{
+    "access_token": < access_token >,
+    "message": "Login Successful"
+}
+```
 
-* Configuration
+You can test the API with the following Tenant
 
-* Database creation
+`full_name` : `Altoros`
 
-* Database initialization
 
-* How to run the test suite
+After you get the `access_token` the header of the request should be like This
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*Header*
+```
+{
+  "Authentication": "Bearer < access_token >"
+}
+```
