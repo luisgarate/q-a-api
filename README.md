@@ -1,6 +1,10 @@
 # Q&A API
+Heroku URL: https://salty-stream-55818.herokuapp.com/
 
-* Login system
+ API call example `GET` `https://salty-stream-55818.herokuapp.com/auth/login`
+
+
+Login system
 
 - A Tenant has `full_name` as attribute to perform the Login to get the `access_token`
 
